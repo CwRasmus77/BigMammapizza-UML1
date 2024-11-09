@@ -23,9 +23,9 @@ namespace PizzaStore
             Kunde kunde2 = new Kunde(2, "Henrik ", "Skolevej 12 ", 12398746, "Heho@edu.zealand.dk");
             Kunde kunde3 = new Kunde(3, "Mikkel ", "vejen 12 ", 29834722, "pikMail@Gmail.com");
 
-            Ordre ordre1 = new Ordre(1, kunde1, 1, pizza1, pizza1.PizzaPris);
-            Ordre ordre2 = new Ordre(2, kunde2, 14, pizza14, pizza14.PizzaPris);
-            Ordre ordre3 = new Ordre(3, kunde3, 19, pizza19, pizza19.PizzaPris);
+            Ordre ordre1 = new Ordre(1, kunde1, 1, pizza1, pizza1.PizzaPris,"kommentar");
+            Ordre ordre2 = new Ordre(2, kunde2, 14, pizza14, pizza14.PizzaPris, "kommentar");
+            Ordre ordre3 = new Ordre(3, kunde3, 19, pizza19, pizza19.PizzaPris, "kommentar");
 
             Console.WriteLine(ordre1);
             Console.WriteLine();

@@ -14,16 +14,16 @@ namespace PizzaStore
         public double Pris { get; private set; }
         public Pizza _pizza { get; private set; }
         public Kunde _kunde { get; private set; }
+        public string _kommentar {  get; private set; }
 
-
-        public Ordre(int ordrenummer, Kunde kunde, int listebestiltepizzaer, Pizza pizza, double pris)
+        public Ordre(int ordrenummer, Kunde kunde, int listebestiltepizzaer, Pizza pizza, double pris, string kommentar)
         { 
             OrdreNummer = ordrenummer;
             _kunde = kunde;
             ListeBestiltePizzaer = listebestiltepizzaer;
             _pizza = pizza;
             Pris = CalculateTotalPrice(pizza);
-
+            _kommentar = kommentar;
 
         }
         public static double CalculateTotalPrice(Pizza pizza)
@@ -37,7 +37,7 @@ namespace PizzaStore
 
 
 
-        public override string ToString() { return "Order Nr " + OrdreNummer + "  " + _kunde + " Pizza " + _pizza + "   " + " Total pris " + Pris + "kr"; }
+        public override string ToString() { return "Order Nr " + OrdreNummer + "  " + _kunde + " Pizza " + _pizza + "   " + " Total pris " + Pris + "kr\n" + _kommentar; }
 
     }
 }
